@@ -1,10 +1,12 @@
-var generateName = require('sillyname');
-var sillyname = generateName();
+//var generateName = require('sillyname');
 
-console.log(`my name is ${sillyname}`);
+import generateStupidName from 'sillyname';
+var sillynames = generateStupidName();
 
-const fs = require('fs');
-fs.writeFile('message.txt', `my name is ${sillyname}`, (err)=>{
+console.log(`my name is ${sillynames}`);
+
+import fs from 'node:fs/promises';
+fs.writeFile('message.txt', `my name is ${sillynames}`, (err)=>{
     if(err) throw err;
     console.log("This file has been saved");
 })
